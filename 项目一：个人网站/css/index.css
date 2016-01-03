@@ -186,13 +186,42 @@
     float: left; 
     width: 285px;
     height: 179px;
+    position: relative;
+    overflow: hidden;
 }
-#portfolio .port-list img{
-    width: 285px;
-    height: 179px;
+#portfolio .port-list .port-img{
+    width: 100%;
+    height: 100%;
+    /*position: absolute;*/
 }
-
-
+#portfolio .mask{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    background: rgb(31, 37, 44);
+   /* opacity: 0.84;
+    filter: alpha(opacity=84);*/
+    display: none;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+#portfolio .mask .mask-info{
+    margin-top: 32px;
+}
+#portfolio .mask h3{
+    color: #fff;
+    font-weight: 200;
+    font-size: 24px;
+}
+#portfolio .mask p{
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+}
 
 
 
@@ -231,14 +260,268 @@
     display: block;
     height: 7px;
 }
+#myblog .myblog-articals{
+    margin: 64px 0 80px 0;
+}
+#myblog .articals-content{
+    width: 315px;
+    margin-right: 45px;
+    background: #FFF;
+    padding: 16px;
+    border: 1px ridge #E7E7E7;
+    float: left;
+    margin-bottom: 32px;
+    overflow: hidden;
+}
+#myblog .articals-content img{
+    width: 100%;
+    height: 100%;
+}
+#myblog .articals-info{
+    text-align: left;
+    padding: 8px 16px 16px 16px;
+}
+#myblog .articals-info h3{
+    margin: 8px 0 0 0;
+    font-size: 21px;
+}
+#myblog .articals-info h3 a{
+    color: #595959;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+
+}
+
+#myblog .articals-info span{
+    color: #7c7c7c;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    margin: 7px 0 8px;
+    display: block;
+}
+#myblog .articals-info span a{
+    color: #7c7c7c;
+}
+#myblog .articals-info p{
+    color: #595959;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 16px;
+    -webkit-appearance: none;
+}
+#myblog .articals-info a.more-btn{
+    background: #64c9db;
+    padding: 13px 24px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #FFF;
+    float: right;
+    margin-top: 13px;
+}
+#myblog .articals-info a.more-btn:hover{
+    background: #595959;
+}
+#myblog .myblog-bottom{
+    text-align: center;
+    clear: both;
+}
+ #myblog .myblog-bottom .more-articals{
+    color: #515151;
+    font-size: 24px;
+    font-weight: 300;
+    padding: 80px 0 10px 0;
+}
+ #myblog .myblog-bottom .more-articals a{
+    color: #64c9db;
+    font-weight: 700;
+    text-transform: uppercase;
+}
 
 
 
 /**********myblog结束**********/
 
+/**********projects结束**********/
+#projects{
+    background: url(../img/projects-bg.jpg) no-repeat 0px 0px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 440px;
+    padding-top: 240px;
+    position: relative;
+}
+
+#projects .cycle{
+    text-align: center;
+}
+#projects .cycle span{
+    width: 284px;
+    height: 284px;
+    display: inline-block;
+    background: url(../img/cycle.png) no-repeat 0px 0px;
+}
 
 
 
+
+
+#projects .project-demo p{
+    color: #FFF;
+    font-size: 29px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin: 0;
+}
+#projects .project-demo span{
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    background: #FFF;
+    margin-top: 16px;
+    -webkit-border-radius: 480px;
+    -moz-border-radius: 480px;
+    -ms-border-radius: 480px;
+    -o-border-radius: 480px;
+    border-radius: 480px;    
+}
+#projects .project-demo span i{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background: url(../img/project-icons.png) no-repeat 0px 0px;
+}
+#projects .project-demo span i.p-icon{
+    margin-top: 15px;
+    margin-left: 10px;
+}
+#projects .clients-wrap span i.p-icon{
+    background-position: -43px 0px;
+}
+#projects .people-wrap span i.p-icon{
+    background-position: -87px 0px;
+}
+#projects .project-wrap{
+    position: absolute;
+    top: 140px;
+    left: 44.5%;
+    text-align: center;
+}
+#projects .clients-wrap{
+    position: absolute;
+    left: 38%;
+    top: 58%;
+    text-align: center;
+}
+#projects .people-wrap{
+    position: absolute;
+    left: 57.5%;
+    top: 58%;
+    text-align: center;
+}
+#projects .clients-wrap div{
+    position: absolute;
+    left: -105px;
+    top: 52px;
+}
+#projects .people-wrap div{
+    position: absolute;
+    left: 30px;
+    top: 60px;
+}
+#projects .project-demo:hover span{
+    background:#5dbed2;
+}
+
+/**********projects结束**********/
+
+/**********footer开始**********/
+#contact{
+    padding: 40px 0;
+    text-align: center;
+}
+#contact p{
+    color: #595959;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+#contact a{
+    background: #5dbed2;
+    padding: 15px 25px;
+    display: inline-block;
+    color: #FFF;
+    font-size: 20px;
+    margin-left: 16px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    -webkit-appearance: none;
+}
+#contact a:hover{
+    background: #595959;
+}
+#footer .bbs{
+    padding: 30px 0 60px 0;
+    border-top: 1px solid #dbdbdb;
+}
+#footer .bbs-left{
+    float: left;
+}
+#footer .bbs-left p,#footer .bbs-left a{
+    color: #8e8e8e;
+    font-size: 16px;
+}
+
+#footer .bbs-right{
+    float: right;
+}
+#footer .bbs-right ul li{
+    float: left;
+    margin-right: 4px;
+}
+#footer .bbs-right ul li a span{
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    display: inline-block;
+    background: url(../img/social-icons.png) no-repeat 0px 0px;
+}
+#footer .bbs-right ul li a span.facebook{
+    background-position: 0px 0px;
+}
+#footer .bbs-right ul li a span.facebook:hover{
+    background-position: 0px -22px;
+}
+#footer .bbs-right ul li a span.twitter{
+    background-position: -21px 0px;
+}
+#footer .bbs-right ul li a span.twitter:hover{
+    background-position: -21px -22px;
+}
+#footer .bbs-right ul li a span.dribbble{
+    background-position: -50px 0px;
+}
+#footer .bbs-right ul li a span.dribbble:hover{
+    background-position: -50px -22px;
+}
+#footer .bbs-right ul li a span.tech{
+    background-position: -80px 0px;
+}
+#footer .bbs-right ul li a span.tech:hover{
+    background-position: -80px -22px;
+}
+
+/**********footer结束**********/
 
 
 
