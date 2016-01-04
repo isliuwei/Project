@@ -1,0 +1,131 @@
+/**********contact-header开始**********/
+#header{
+	min-height: 200px;
+}
+#contact-container{
+	padding: 80px 0;
+}
+#contact-container .container-left{
+	float: left;
+	width: 65%;
+}
+#contact-container .container-left p{
+	margin-bottom: 32px;
+}
+#contact-container .container-left label{
+	display: block;
+    font-size: 13px;
+    color: #000;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#contact-container .container-left input{
+	width: 91%;
+	height: 25px;
+	padding: 10px;
+    color: #9198A3;
+    background: #fff;
+    outline: none;
+    display: block;
+    border: 1px solid #eee;
+    -webkit-appearance: none;
+}
+#contact-container .container-left textarea{
+	width: 91%;
+	padding: 10px;
+    display: block;
+    background: #fff;
+    border: 1px solid #eee;
+    outline: none;
+    color: #9198A3;
+    -webkit-appearance: none;
+    resize: none;
+    height: 150px;
+    -webkit-appearance: none;
+}
+#contact-container .container-left .submit-btn{
+    display: inline-block;
+    width: 110px;
+    height: 44px;
+    padding: 13px 25px;
+    background: #02D7FD;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    /*-webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    -webkit-appearance: none;*/
+}
+
+#contact-container .container-left .submit-btn:hover{
+	background:#03CBEF;
+	-webkit-transform: rotateY(15deg);
+	-moz-transform: rotateY(15deg);
+	-ms-transform: rotateY(15deg);
+	-o-transform: rotateY(15deg);
+	transform: rotateY(15deg);
+	text-decoration: none;
+	background: #000;
+};
+#contact-container .container-right{
+	float: right;
+	width: 9%;
+	padding: 0 15px;
+}
+#contact-container .container-right h3{
+	color: #000;
+	font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+#contact-container .container-right .right-content{
+	overflow: hidden;
+    color: #999;
+    line-height: 24px;
+    margin-bottom: 24px;
+}
+#contact-container .container-right .right-phone{
+	overflow: hidden;
+    color: #999;
+    line-height: 24px;
+    margin-bottom: 24px;
+
+}
+#contact-container .container-right a{
+	color: #1B242F;
+}
+/**********contact-header结束**********/
+
+#error{
+    width: 1140px;
+    height: 300px;
+    margin: 50px auto;
+    clear: both;
+    background: #fff;
+    float: left;
+    margin-left: 70px;
+    position: relative;
+}
+#error img{
+    position: absolute;
+    left: 50%;
+    margin-left: -16px;
+    top: 50%;
+    margin-top: -21px;
+
+}
+#error:hover{
+    background-color: #DDD;
+}
+
+
+
+

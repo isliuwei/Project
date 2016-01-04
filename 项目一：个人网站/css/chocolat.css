@@ -16,6 +16,10 @@ body{
 }
 div#Choco_overlay {
 background:rgba(0, 0, 0, 0.83) !important;
+/*background: rgb(0,0,0);
+opacity: 0.83;
+filter: alpha(opacity=83);*//*解决IE透明度问题*/
+
 }
 #Choco_content{
 	display:none;
