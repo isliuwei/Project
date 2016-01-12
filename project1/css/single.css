@@ -1,0 +1,114 @@
+#single-container{
+	padding: 80px 0;
+}
+#single-container p{
+	color: #555;
+    font-size: 15px;
+    line-height: 29px;
+    margin: 16px 0;
+}
+#single-container .comment{
+	border: 1px solid #E6E6E6;
+    padding: 32px;
+    margin: 48px 0;
+    height: 150px;
+}
+#single-container .comment h5{
+	line-height: 20px;
+    font-size: 20px;
+    color: #999;
+    margin: 10px 0;
+}
+#single-container .comment h5 a{
+	color: #555;
+}
+#single-container .comment h5 a:hover{
+	text-decoration: underline;
+}
+#single-container .comment img{
+	float: left;
+    width: 10%;
+    margin-right: 20px;
+}
+#single-container .comment p{
+	color: #555;
+    font-size: 15px;
+    line-height: 29px;
+    margin: 16px 0;
+}
+#single-container .comment p a{
+	color: #1B242F;
+}
+#single-container .comment p a:hover{
+	text-decoration: underline;
+};
+
+#single-container .new-comment{
+	margin-top: 80px;
+}
+#single-container .new-comment h3{
+	font-size: 32px;
+    color: #555;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+#single-container .new-comment p{
+	position: relative;
+    padding: 8px 0;
+}
+#single-container .new-comment label{
+	display: block;
+    color: #999;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+#single-container .new-comment span{
+	color: #e4411b;
+    position: absolute;
+    left: 4px;
+    top: 40px;
+    font-size: 16px;
+}
+#single-container .new-comment .text{
+    padding: 15px 20px;
+    width: 75%;
+    height: 25px;
+    color: #999;
+    font-size: 13px;
+    border: none;
+    background: #fff;
+    outline: none;
+    display: block;
+    -webkit-appearance: none;
+}
+#single-container .new-comment textarea{
+	padding: 15px 30px;
+    width: 90%;
+    color: #999;
+    font-size: 13px;
+    outline: none;
+    height: 200px;
+    display: block;
+    border: none;
+    background: #fff;
+    -webkit-appearance: none;
+}
+#single-container .new-comment .submit-btn{
+    display: inline-block;
+    width: 172px;
+    height: 55px;
+    padding: 15px 20px;
+    background: #02D7FD;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+}
+#single-container .new-comment .submit-btn:hover{
+	background:#03CBEF;
+}
+
+
+

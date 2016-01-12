@@ -1,0 +1,603 @@
+/**********aboutme开始**********/
+
+#aboutme{
+    padding: 48px 0 80px;
+    width: 100%;
+    min-height: 528px;
+	text-align: center;
+}
+#aboutme .aboutme-top{
+	margin-bottom: 64px;
+}
+#aboutme .aboutme-top h2{
+	font-weight: 900;
+    color: #595959;
+    font-size: 38px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0 0 14px;
+}
+#aboutme .aboutme-top span{  /*记住*/
+	width: 8%;
+    margin: 0 auto;
+    background: #88ccd8;
+    display: block;
+    height: 7px;
+}
+#aboutme .aboutme-left{
+	float: left;
+	text-align: left;
+	width: 540px;
+	height: 328px;
+	padding: 0 15px;
+}
+#aboutme .aboutme-left h3{
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #595959;
+    font-size: 24px;
+}
+#aboutme .aboutme-left span{
+	margin: 8px 0;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #595959;
+    font-size: 16px;
+}
+#aboutme .aboutme-left p{
+	color: #7c7c7c;
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 30px;
+    margin-top: 16px;
+}
+#aboutme .aboutme-right{
+	float: right;
+	width: 540px;
+	height: 402px;
+}
+#aboutme .aboutme-right img{
+	width: 100%;
+	height: 100%;
+}
+
+/**********aboutme结束**********/
+
+
+/**********myservice开始**********/
+#myservice{
+    clear: both;
+    width: 100%;
+    height: 655px;
+    padding: 64px 0 80px;
+    text-align: center;
+    background: url(../img/services-bg.jpg) no-repeat 0 0;
+}
+#myservice .myservice-top h2{
+    font-weight: 900;
+    color: #fff;
+    font-size: 37px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0 0 15px;
+}
+#myservice .myservice-top span{  /*记住*/
+    width: 8%;
+    margin: 0 auto;
+    background: #88ccd8;
+    display: block;
+    height: 7px;
+}
+#myservice .container{
+    margin-top: 80px;
+}
+#myservice .myservice-list li{
+    width: 350px;
+    height: 217px;
+    float: left;
+    padding: 0 15px;
+    text-align: center;
+}
+#myservice .myservice-list li span{
+    width: 48px;
+    height: 42px;
+    display: inline-block;
+    background: url(../img/services-icons.png) no-repeat;
+}
+#myservice .myservice-list .s-cion1{
+    background-position: 0 0;
+}
+#myservice .myservice-list .s-cion2{
+    background-position: -55px 0;
+}
+#myservice .myservice-list .s-cion3{
+    background-position: -120px 0;
+}
+#myservice .myservice-list .s-cion4{
+    background-position: -177px 0;
+}
+#myservice .myservice-list .s-cion5{
+    background-position: -238px 0;
+}
+#myservice .myservice-list .s-cion6{
+    background-position: -297px 0;
+}
+
+#myservice .myservice-list li h3{
+    color: #878a8e;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 12px 0;
+
+}
+#myservice .myservice-list li p{
+    color: #878a8e;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 24px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+/**********myservice结束**********/
+
+
+
+
+/**********portfolio开始**********/
+
+#portfolio{
+    text-align: center;
+    width: 100%;
+    height: 475px;
+    padding: 64px 0 80px;
+
+}
+#portfolio .port-top h2{
+    font-weight: 900;
+    color: #595959;
+    font-size: 37px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0 0 15px;
+}
+#portfolio .port-top span{  /*记住*/
+    width: 8%;
+    margin: 0 auto;
+    background: #88ccd8;
+    display: block;
+    height: 7px;
+}
+#portfolio .port-list{
+    margin-top: 56px;
+}
+#portfolio .port-list li{
+    float: left; 
+    width: 285px;
+    height: 179px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+#portfolio .port-list .port-img{
+    width: 100%;
+    height: 100%;
+    /*position: absolute;*/
+}
+#portfolio .mask{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    background: rgb(31, 37, 44);
+   /* opacity: 0.84;
+    filter: alpha(opacity=84);*/
+    display: none;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+#portfolio .mask .mask-info{
+    margin-top: 32px;
+}
+#portfolio .mask h3{
+    color: #fff;
+    font-weight: 200;
+    font-size: 24px;
+}
+#portfolio .mask p{
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+
+/**********portfolio结束**********/
+
+
+
+
+/**********myblog开始**********/
+
+#myblog{
+    text-align: center;
+    width: 100%;
+    /*padding: 64px 0 80px;*/
+}
+
+
+#myblog .myblog-top h2{
+    font-weight: 900;
+    color: #595959;
+    font-size: 37px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0 0 15px;
+}
+#myblog .myblog-top span{  /*记住*/
+    width: 8%;
+    margin: 0 auto;
+    background: #88ccd8;
+    display: block;
+    height: 7px;
+}
+/*#myblog .myblog-articals{*/
+    /*margin: 64px 0 80px 0;*/
+/*}*/
+#myblog .blog-list{
+    margin: 64px 0 80px 0;
+    width: 347px;
+    float: left;
+    margin-right: 40px;
+}
+/*#myblog .articles-content{*/
+    /*float: left;*/
+    /*width: 305px;*/
+    /*margin-right: 40px;*/
+    /*background: #FFF;*/
+    /*padding: 16px;*/
+    /*border: 1px ridge #E7E7E7;*/
+    /*float: left;*/
+    /*margin-bottom: 32px;*/
+    /*overflow: hidden;*/
+    /*text-align: left;*/
+/*}*/
+/*#myblog .articles-wrap{*/
+     /*padding: 8px 16px 16px 16px;*/
+ /*}*/
+/*#myblog .articles-wrap li{*/
+    /*margin: 8px;*/
+/*}*/
+/*#myblog .articles-content img{*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+/*}*/
+/*#myblog .articles-content h3{*/
+    /*margin: 8px 0 0 0;*/
+    /*font-size: 21px;*/
+/*}*/
+/*#myblog .articles-content h3 a{*/
+    /*color: #595959;*/
+    /*font-weight: 700;*/
+    /*text-transform: uppercase;*/
+    /*text-decoration: none;*/
+/*}*/
+/*#myblog .articles-content span{*/
+    /*color: #7c7c7c;*/
+    /*text-transform: uppercase;*/
+    /*font-weight: 700;*/
+    /*font-size: 14px;*/
+    /*margin: 7px 0 8px;*/
+/*}*/
+/*#myblog .articles-content span a{*/
+    /*color: #7c7c7c;*/
+/*}*/
+/*#myblog .articles-content p{*/
+    /*color: #595959;*/
+    /*text-transform: uppercase;*/
+    /*font-weight: 400;*/
+    /*line-height: 24px;*/
+    /*margin-top: 16px;*/
+    /*-webkit-appearance: none;*/
+/*}*/
+/*#myblog .articles-content a.more-btn{*/
+    /*background: #64c9db;*/
+    /*padding: 13px 24px;*/
+    /*display: inline-block;*/
+    /*text-transform: uppercase;*/
+    /*font-weight: 600;*/
+    /*color: #FFF;*/
+    /*float: right;*/
+    /*margin-top: 13px;*/
+/*}*/
+/*#myblog .articles-content a.more-btn:hover{*/
+    /*background: #595959;*/
+/*}*/
+/*#myblog .myblog-bottom{*/
+    /*text-align: center;*/
+    /*clear: both;*/
+/*}*/
+
+/*??*/
+#myblog .blog-list li{
+    background: #FFF;
+    padding: 16px;
+    border: 1px ridge #E7E7E7;
+    margin-bottom: 32px;
+    overflow: hidden;
+    text-align: left;
+}
+#myblog .articles-wrap{
+padding: 8px 16px 16px 16px;
+}
+#myblog .blog-list li img{
+    width: 100%;
+}
+
+#myblog .blog-list li h3{
+    margin: 8px 0 0 0;
+    font-size: 21px;
+}
+#myblog .blog-list li h3 a{
+    color: #595959;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+#myblog .blog-list li span{
+    color: #7c7c7c;
+    /*text-transform: uppercase;*/
+    font-weight: 700;
+    font-size: 14px;
+    margin: 7px 0 8px;
+}
+#myblog .blog-list li span a{
+    color: #7c7c7c;
+}
+#myblog .blog-list li p{
+    color: #595959;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 16px;
+    -webkit-appearance: none;
+}
+#myblog .blog-list li a.more-btn{
+    background: #64c9db;
+    padding: 13px 24px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #FFF;
+    float: right;
+    margin-top: 13px;
+}
+#myblog .blog-list li a.more-btn:hover{
+    background: #595959;
+}
+
+/*??*/
+#myblog .myblog-bottom .more-articals{
+    clear: both;
+    color: #515151;
+    font-size: 24px;
+    font-weight: 300;
+    padding: 80px 0 48px 0;
+}
+#myblog .myblog-bottom .more-articals a{
+    color: #64c9db;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+/**********myblog结束**********/
+
+/**********projects结束**********/
+#projects{
+    background: url(../img/projects-bg.jpg) no-repeat 0px 0px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 440px;
+    padding-top: 240px;
+    position: relative;
+    clear: both;
+}
+
+#projects .cycle{
+    text-align: center;
+}
+#projects .cycle span{
+    width: 284px;
+    height: 284px;
+    display: inline-block;
+    background: url(../img/cycle.png) no-repeat 0px 0px;
+}
+
+
+
+
+
+#projects .project-demo p{
+    color: #FFF;
+    font-size: 29px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin: 0;
+}
+#projects .project-demo span{
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    background: #FFF;
+    margin-top: 16px;
+    -webkit-border-radius: 480px;
+    -moz-border-radius: 480px;
+    -ms-border-radius: 480px;
+    -o-border-radius: 480px;
+    border-radius: 480px;    
+}
+#projects .project-demo span i{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background: url(../img/project-icons.png) no-repeat 0px 0px;
+}
+#projects .project-demo span i.p-icon{
+    margin-top: 15px;
+    margin-left: 10px;
+}
+#projects .clients-wrap span i.p-icon{
+    background-position: -43px 0px;
+}
+#projects .people-wrap span i.p-icon{
+    background-position: -87px 0px;
+}
+#projects .project-wrap{
+    position: absolute;
+    top: 140px;
+    left: 44.5%;
+    text-align: center;
+}
+#projects .clients-wrap{
+    position: absolute;
+    left: 38%;
+    top: 58%;
+    text-align: center;
+}
+#projects .people-wrap{
+    position: absolute;
+    left: 57.5%;
+    top: 58%;
+    text-align: center;
+}
+#projects .clients-wrap div{
+    position: absolute;
+    left: -105px;
+    top: 52px;
+}
+#projects .people-wrap div{
+    position: absolute;
+    left: 30px;
+    top: 60px;
+}
+#projects .project-demo:hover span{
+    background:#5dbed2;
+}
+
+/**********projects结束**********/
+
+/**********footer开始**********/
+#contact{
+    padding: 40px 0;
+    text-align: center;
+}
+#contact p{
+    color: #595959;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+#contact a{
+    background: #5dbed2;
+    padding: 15px 25px;
+    display: inline-block;
+    color: #FFF;
+    font-size: 20px;
+    margin-left: 16px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    border-radius: 7px;
+    -webkit-appearance: none;
+}
+#contact a:hover{
+    background: #595959;
+}
+#footer{
+    clear: both;
+}
+#footer .bbs{
+    padding: 30px 0 60px 0;
+    border-top: 1px solid #dbdbdb;
+}
+#footer .bbs-left{
+    float: left;
+}
+#footer .bbs-left p,#footer .bbs-left a{
+    color: #8e8e8e;
+    font-size: 16px;
+}
+#footer .bbs-right{
+    float: right;
+}
+#footer .bbs-right ul li{
+    float: left;
+    margin-right: 4px;
+}
+#footer .bbs-right ul li a span{
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    display: inline-block;
+    background: url(../img/social-icons.png) no-repeat 0px 0px;
+}
+#footer .bbs-right ul li a span.facebook{
+    background-position: 0px 0px;
+}
+#footer .bbs-right ul li a span.facebook:hover{
+    background-position: 0px -22px;
+}
+#footer .bbs-right ul li a span.twitter{
+    background-position: -21px 0px;
+}
+#footer .bbs-right ul li a span.twitter:hover{
+    background-position: -21px -22px;
+}
+#footer .bbs-right ul li a span.dribbble{
+    background-position: -50px 0px;
+}
+#footer .bbs-right ul li a span.dribbble:hover{
+    background-position: -50px -22px;
+}
+#footer .bbs-right ul li a span.tech{
+    background-position: -80px 0px;
+}
+#footer .bbs-right ul li a span.tech:hover{
+    background-position: -80px -22px;
+}
+
+/**********footer结束**********/
+
+
+
+
+
+
+
+
+    
