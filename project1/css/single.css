@@ -30,7 +30,7 @@
     width: 10%;
     margin-right: 20px;
 }
-#single-container .comment p{
+#single-container .comment .comment-text{
 	color: #555;
     font-size: 15px;
     line-height: 29px;
@@ -42,6 +42,49 @@
 #single-container .comment p a:hover{
 	text-decoration: underline;
 };
+#single-container .comment-list{
+    color: #555;
+    font-size: 15px;
+    margin: 20px;
+}
+#single-container .comment-list .comment-wrap{
+    border: 1px solid #D7CBC1;
+    margin: 5px 0px;
+}
+#single-container .comment-list .comment-title{
+    color: #333;
+    font: bold 12px/30px Arial;
+    text-indent: 5px;
+    margin: 10px 0px;
+    background: url(../img/comment-list-bg.jpg) repeat-x;
+}
+#single-container .comment-list .comment-info{
+    background-color: #E0DBD3;
+    color: #47381C;
+    font-size: 10px;
+    padding: 5px 10px;
+}
+#single-container .comment-list .comment-content{
+    min-height: 60px;
+}
+#single-container .comment-list .comment-user-photo{
+    display: inline-block;
+    margin: 5px 10px;
+    float: left;
+}
+#single-container .comment-list .comment-user-photo img{
+    border-radius: 50%;
+}
+#single-container .comment-list .comment-text{
+    /*display: inline-block;*/
+    margin-left: 70px;
+    font-size: 12px;
+    
+}
+#single-container .comment-list .comment-text p{
+    font-size: 12px;
+    margin: 5px 0px;
+}
 
 #single-container .new-comment{
 	margin-top: 80px;

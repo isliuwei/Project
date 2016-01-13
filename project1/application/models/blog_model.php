@@ -25,21 +25,16 @@ class Blog_model extends CI_Model {
         return $this -> db -> get() -> result();
     }
 
-//    public function get_by_id($blog_id)
-//    {
-//        $data = array(
-//            'blog_id' => $blog_id
-//        );
-//
-//        $query = $this -> db -> get_where('t_blog',$data);
-//
-//        //返回一行查询结果
-//        return $query -> row();
-//    }
-
-
-
-
+    public function get_by_id($blog_id)
+    {
+        $this -> db -> select("*");
+        $this -> db -> from('t_blog blog');
+        $this -> db -> join('t_admin admin', 'blog.blog_author = admin.admin_id');
+        $this -> db -> where('blog.blog_id',$blog_id);
+        $query = $this -> db -> get();
+        //返回一行查询结果
+        return $query -> row();
+    }
 
     //增
     public function save(){

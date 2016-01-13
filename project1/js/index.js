@@ -48,53 +48,6 @@ $(function(){
 	});
 
 
-		// myblog
-
-		
-		// $.getJSON('js/blogs.json',function(data){
-		// 	// console.log(data);
-		// 	for(var i=0; i<data.length; i++){
-		// 		var blog = data[i];
-		// 		var $minUl = getMinUl();
-		// 		$minUl.append("<li><img src=img/" + blog.blog_img + " alt=" + "></li>");
-		// 		$minUl.append("<li><h3><a href=" + "#" + ">" + blog.blog_title + "</a></h3>");
-		// 		$minUl.append("</li><li><span>" + blog.blog_author + " | " + "</span><a href=" + "#" + ">" + blog.blog_comments + "</a></li>");
-		// 		$minUl.append("<li><p>" + blog.blog_content + "</p></li>");
-
-		// 	}	
-
-		// });
-
-
-
-		// function getMinUl(){
-		// 	var $minUl = $myblogList.eq(0);
-		// 	for(var i=1; i<3; i++){
-		// 		if( $minUl.height() > $myblogList.eq(i).height() ){
-		// 			$minUl = $myblogList.eq(i);
-		// 		}
-		// 	}
-		// 	return $minUl;
-		// }
-
-		// top-top
-		
-		// $(window).scroll(function(){
-		// 	if( $(window).scrollTop() > 400){
-		// 		$toTop.show();
-		// 	}else{
-		// 		$toTop.hide();
-		// 	}
-		// })
-		// $toTop.click(function(){
-		// 	// $(this).animate({
-		// 	// 	top: 400
-		// 	// },200);
-		// 	$(window).animate({
-		// 		scrollTop: 400
-		// 	},200);
-
-		// })
 
 		// top-top返回顶部
 		$().UItoTop({ easingType: 'easeOutQuart' });
@@ -136,7 +89,7 @@ $(function(){
 							var blog = res.data[i];
 							var html = '<li class="blog-artical">'
 									+ '<div class="blog-artical-pic">'
-									+ '<a href="welcome/single?blog_id='+blog.blog_id+'"><img src='+blog.blog_photo+' title="name" /></a>'
+									+ '<a href="welcome/detail?blog_id='+blog.blog_id+'"><img src='+blog.blog_photo+' title="name" /></a>'
 									+ '</div>'
 									+ '<div class="blog-artical-info">'
 									+ '<h3><a href="#">'+blog.blog_title+'</a></h3>'
@@ -168,20 +121,5 @@ $(function(){
 
 
 	});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 });

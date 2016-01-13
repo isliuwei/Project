@@ -44,7 +44,56 @@
 			<div class="comment">
 				<h5 class="post-author_head">Written by <a href="#" title="Posts by admin" rel="author">admin</a></h5>
 				<img src="img/avatar.png" class="img-responsive" alt="">
-				<p>View all posts by: <a href="#" title="Posts by admin" rel="author">admin</a></p>
+				<p class="comment-text">View all posts by: <a href="#" title="Posts by admin" rel="author">admin</a></p>
+			</div>
+			<div class="comment-list">
+				<h3 class="comment-title">所有评论</h3>
+				<div class="comment-wrap">
+					<div class="comment-info">
+						<span class="comment-floor">1楼 | </span>
+						<span class="comment-username">评论用户:admin1 | </span>
+						<span class="comment_time">评论时间:2016-01-12 19:05</span>
+					</div>
+					<div class="comment-content">
+						<div  class="comment-user-photo" >
+							<img src="img/comment-user-bg.gif" alt="">
+						</div>
+						<div class="comment-text">
+							<p>【马云：要能重新选择，我一定不做马云】知名媒体人吴小莉在7月曾对话阿里巴巴创始人马云，马云在台上语出惊人的表示“要能重新选择，我一定不做马云，太辛苦了”。马云甚至公开说后悔在美国上市，事业爬升太高，自己相当“缺氧”</p>
+						</div>
+					</div>
+				</div>
+				<div class="comment-wrap">
+					<div class="comment-info">
+						<span class="comment-floor">2楼 | </span>
+						<span class="comment-username">评论用户:admin2 | </span>
+						<span class="comment_time">评论时间:2016-01-12 12:35</span>
+					</div>
+					<div class="comment-content">
+						<div  class="comment-user-photo" >
+							<img src="img/comment-user-bg.gif" alt="">
+						</div>
+						<div class="comment-text">
+							<p>【李彦宏：IT大佬都掉水里，我会救雷军】李彦宏10月参加了央视节目《开讲啦》，在节目中撒贝宁问李彦宏：“如果马云、马化腾、刘强东和雷军同时掉水里，你只能救一个?你会救谁?”李彦宏笑称会救雷军，因为雷军最近送了他一部小米手机!</p>
+						</div>
+					</div>
+				</div>
+				<div class="comment-wrap">
+					<div class="comment-info">
+						<span class="comment-floor">3楼 | </span>
+						<span class="comment-username">评论用户:admin3 | </span>
+						<span class="comment_time">评论时间:2016-01-11 23:10</span>
+					</div>
+					<div class="comment-content">
+						<div  class="comment-user-photo" >
+							<img src="img/comment-user-bg.gif" alt="">
+						</div>
+						<div class="comment-text">
+							<p>【周鸿祎：一觉醒来，整个世界都变了】12月17日，世界互联网大会第二天，一张雷军“深情对视”酣睡着的周鸿祎的照片瞬间刷爆朋友圈，不少网友还配上了有趣的台词，各种版本，各种剧情，各种YY，但当事人貌似还不明就里。直到第二天周鸿祎才回应，“一觉醒来，整个世界都变了。”</p>
+						</div>
+					</div>
+				</div>
+
 			</div>
 			<div class="new-comment">
 				<h3>Add New Comment</h3>
