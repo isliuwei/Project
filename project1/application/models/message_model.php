@@ -19,6 +19,16 @@ class Message_model extends CI_Model {
         )) -> row();
     }
 
+    public function get_all(){
+        $this -> db -> select("*");
+        $this -> db -> from('t_message message');
+        $this -> db -> order_by('add_time','desc' ); //按照时间降序排列留言信息
+        return $this -> db -> get() -> result();
+    }
+
+    public function delete($message_id){
+        $this -> db -> delete('t_message', array('message_id' => $message_id));
+    }
 
 
 

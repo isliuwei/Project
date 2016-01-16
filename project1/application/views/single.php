@@ -17,8 +17,8 @@
 		} 
 	</script>
 	<!-- webfonts -->
-	<link href='http://fonts.googleapis.com/css?family=Raleway:200,400,300,600,500,900,700,100,800' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+<!--	<link href='http://fonts.googleapis.com/css?family=Raleway:200,400,300,600,500,900,700,100,800' rel='stylesheet' type='text/css'>-->
+<!--	<link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>-->
 	<!-- // webfonts -->
 </head>
 <body>

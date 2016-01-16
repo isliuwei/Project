@@ -48,7 +48,28 @@ class Blog_model extends CI_Model {
 
     //删
     public function delete($blog_id){
+        $this -> db -> delete('t_blog', array('blog_id' => $blog_id));
 
     }
+
+//    增 新增  ?? 2016-01-16 11:51
+    public function save_articles($title,$content,$author,$photo){
+        $data = array(
+            'blog_title' => $title,
+            'blog_content' => $content,
+            'blog_author' => $author,
+            'blog_photo' => $photo
+
+        );
+
+        $this -> db -> insert('t_blog',$data);
+
+    }
+
+
+
+
+
+
 
 }

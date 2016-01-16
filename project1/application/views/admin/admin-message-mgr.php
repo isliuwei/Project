@@ -32,7 +32,7 @@
     <div class="admin-content">
 
         <div class="am-cf am-padding">
-            <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">评论管理界面</strong> / <small>Comments</small></div>
+            <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">留言管理界面</strong> / <small>Messages</small></div>
         </div>
 
         <div class="am-g">
@@ -53,33 +53,28 @@
                     <tr>
                         <th class="table-check"><input type="checkbox" /></th>
                         <th class="table-id">ID</th>
-                        <th class="table-title">username</th>
-                        <th class="table-title">email</th>
-                        <th class="table-type">website</th>
-<!--                        <th class="table-type">subject</th>-->
-                        <th class="table-type">评论时间</th>
-                        <th class="table-type">文章ID</th>
-                        <th class="table-set">操作</th>
+                        <th class="table-title">用户名</th>
+                        <th class="table-type">email</th>
+                        <th class="table-type">评论内容</th>
+                        <th class="table-set">添加时间</th>
                     </tr>
                     </thead>
                     <tbody>
                     <?php
-                    foreach($comments as $comment){
+                    foreach($messages as $message){
                         ?>
                         <tr>
                             <td><input type="checkbox" /></td>
-                            <td><?php echo $comment -> comment_id; ?></td>
-                            <td><a href="#"><?php echo $comment -> username; ?></a></td>
-                            <td><?php echo $comment -> email; ?></td>
-                            <td><?php echo $comment -> website; ?></td>
-<!--                            <td style="width: 200px">--><?php //echo $comment -> subject; ?><!--</td>-->
-                            <td><?php echo $comment -> add_time; ?></td>
-                            <td><?php echo $comment -> blog_id; ?></td>
+                            <td><?php echo $message -> message_id; ?></td>
+                            <td style="width: 150px";><?php echo $message -> username; ?></td>
+                            <td> <?php echo $message -> email; ?></td>
+                            <td style="width: 200px";> <?php echo $message -> content; ?></td>
+                            <td> <?php echo $message -> add_time; ?></td>
                             <td>
                                 <div class="am-btn-toolbar">
                                     <div class="am-btn-group am-btn-group-xs">
                                         <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                                        <button data-id="<?php echo $comment -> comment_id; ?>" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only am-btn-delete"><span class="am-icon-trash-o"></span> 删除</button>
+                                        <button href="admin/delete_admin" data-id="<?php echo $message -> message_id; ?>" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only am-btn-delete"><span class="am-icon-trash-o"></span> 删除</button>
                                     </div>
                                 </div>
                             </td>
@@ -118,9 +113,9 @@
 
     $(function(){
         $('.am-btn-delete').on('click', function(){
-            var commentId =  $(this).data('id');
+            var messageId =  $(this).data('id');
             if(confirm('确定是否删除记录，不可恢复!?')){
-                location.href = 'admin/delete_comment?comment_id='+commentId;
+                location.href = 'admin/delete_message?message_id='+messageId;
             }
         });
     });

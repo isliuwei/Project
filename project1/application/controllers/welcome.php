@@ -38,23 +38,9 @@ class Welcome extends CI_Controller {
 
 
 
-//	public function detail()
-//	{
-//		$this->load->view('detail');
-//	}
 
-//	public function detail()
-//	{
-//		$blog_id = $this -> input -> get('blog_id');
-//		$this -> load -> model('blog_model');
-//		$result = $this -> blog_model -> get_by_id($blog_id);
-//		$data = array(
-//				'blog_article' => $result
-//		);
-//		$this->load->view('detail',$data);
-//	}
 
-	//?? 2016-01-13 11:06
+	//!! 2016-01-13 11:06 by liuwei
 	public function detail()
 	{
 		$blog_id = $this -> input -> get('blog_id');
@@ -68,6 +54,43 @@ class Welcome extends CI_Controller {
 		);
 		$this->load->view('detail',$data);
 	}
+
+	//?? 2016-01-13 14:22 by liuwei
+//	public function detail()
+//	{
+//		$blog_id = $this -> input -> get('blog_id');
+//		$this -> load -> model('blog_model');
+//		$this -> load -> model('comment_model');
+//		$article_result = $this -> blog_model -> get_by_id($blog_id);
+//		$comment_result = $this -> comment_model -> get_all_by_blog_id($blog_id);
+//		$data = array(
+//				'blog_article' => $article_result,
+//				'comments' => $comment_result
+//		);
+//		$this->load->view('detail',$data);
+//
+//		//1.接收数据
+//		$name = $this -> input -> post('name');
+//		$email = $this -> input -> post('email');
+//		$website = $this -> input -> post('website');
+//		$subject = $this -> input -> post('subject');
+//
+//		//2.连接数据库
+//		if($name == '' || $email == '' || $website == '' || $subject == ''){
+//
+//			//$this -> load -> view('detail');
+//			redirect('welcome/detail?blog_id='.$blog_id);
+//			echo "<script>alert('评论失败!');</script>";
+//		}else{
+//			$this -> load -> model('comment_model');
+//			$this -> comment_model -> save_comment($name,$email,$website,$subject);
+//
+//			//3.跳转
+//			echo "<script>alert('感谢您的评论!');</script>";
+//			//$this->load->view('detail');
+//			redirect('welcome/detail?blog_id='.$blog_id);
+//		}
+//	}
 
 
 
@@ -113,6 +136,7 @@ class Welcome extends CI_Controller {
 
 	}
 
+	//?? 2016-01-13 14:22 by liuwei
 	public function comment()
 	{
 		//1.接收数据
@@ -120,19 +144,21 @@ class Welcome extends CI_Controller {
 		$email = $this -> input -> post('email');
 		$website = $this -> input -> post('website');
 		$subject = $this -> input -> post('subject');
+		$blog_id = $this -> input -> post('blog_id');
 
 		//2.连接数据库
 		if($name == '' || $email == '' || $website == '' || $subject == ''){
 
-//			$this -> load -> view('single');
 			echo "<script>alert('评论失败!');</script>";
+			redirect('welcome/detail?blog_id='.$blog_id);
+
 		}else{
 			$this -> load -> model('comment_model');
-			$this -> comment_model -> save_comment($name,$email,$website,$subject);
+			$this -> comment_model -> save_comment($name,$email,$website,$subject,$blog_id);
 
 			//3.跳转
 			echo "<script>alert('感谢您的评论!');</script>";
-//			$this->load->view('single');
+			redirect('welcome/detail?blog_id='.$blog_id);
 		}
 	}
 
@@ -145,39 +171,11 @@ class Welcome extends CI_Controller {
 		$result = $this -> blog_model -> get_by_page($page);
 		$json = array(
 				'data' => $result,
-				'isEnd' => $page/6+1<$total_page?false:true
+				'isEnd' => $page/6<$total_page?false:true
 		);
 		echo json_encode($json);
+
 	}
-
-
-//	public function get_comments(){
-//		$this -> load -> model('comment_model');
-//		$result = $this -> comment_model -> get_all();
-//		if($result){
-//			$data = array(
-//					'comments' => $result
-//			);
-//			$this -> load -> view('detail',$data);
-//		}
-//	}
-
-
-	//博客文章操作
-//	public function welcome_message()
-//	{
-//		$this -> load -> model('blog_model');
-//		$result = $this -> blog_model -> get_all();
-//		if($result){
-//			$data = array(
-//					'articles' => $result
-//			);
-//			$this -> load -> view('welcome_message',$data);
-//		}
-//	}
-
-
-
 
 }
 

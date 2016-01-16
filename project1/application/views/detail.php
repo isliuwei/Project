@@ -17,8 +17,8 @@
         }
     </script>
     <!-- webfonts -->
-    <link href='http://fonts.googleapis.com/css?family=Raleway:200,400,300,600,500,900,700,100,800' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+<!--    <link href='http://fonts.googleapis.com/css?family=Raleway:200,400,300,600,500,900,700,100,800' rel='stylesheet' type='text/css'>-->
+<!--    <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>-->
     <!-- // webfonts -->
 </head>
 <body>
@@ -121,6 +121,7 @@
         <div class="new-comment">
             <h3>Add New Comment</h3>
             <form action="welcome/comment" method="post">
+                <input type="hidden" name="blog_id" value="<?php echo $this -> input -> get('blog_id'); ;?>">
                 <p>
                     <label>Name</label>
                     <span>*</span>
@@ -195,7 +196,8 @@
 
 
 <script src="js/jquery-1.11.3.min.js"></script>
-<script src="js/index.js"></script>
+<!--<script src="js/index.js"></script>-->
+<script src="js/detail.js"></script>
 
 <!-- start-smoth-scrolling-->
 <script src="js/easing.js"></script>

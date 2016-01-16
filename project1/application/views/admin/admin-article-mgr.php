@@ -39,7 +39,7 @@
             <div class="am-u-sm-12 am-u-md-6">
                 <div class="am-btn-toolbar">
                     <div class="am-btn-group am-btn-group-xs">
-                        <button type="button" class="am-btn am-btn-default"><span class="am-icon-plus"></span> 新增</button>
+                        <button type="button" class="am-btn am-btn-default"><span class="am-icon-plus"></span><a href="admin/admin_add_mgr"> 新增</a></button>
                         <button type="button" class="am-btn am-btn-default"><span class="am-icon-trash-o"></span> 删除</button>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
                             <td><input type="checkbox" /></td>
                             <td><?php echo $blog -> blog_id; ?></td>
                             <td><a href="#"><?php echo $blog -> blog_title; ?></a></td>
-<!--                            <td style="width: 250px">--><?php //echo $blog -> blog_content; ?><!--</td>-->
+<!--                            <td style="width: 250px;">--><?php //echo $blog -> blog_content; ?><!--</td>-->
                             <td><?php echo $blog -> add_time; ?></td>
                             <td><?php echo $blog -> blog_author; ?></td>
                             <td>default</td>
@@ -77,7 +77,7 @@
                                 <div class="am-btn-toolbar">
                                     <div class="am-btn-group am-btn-group-xs">
                                         <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-                                        <button data-id="<?php echo $blog -> blog_id; ?>" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
+                                        <button data-id="<?php echo $blog -> blog_id; ?>" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only am-btn-delete"><span class="am-icon-trash-o"></span> 删除</button>
                                     </div>
                                 </div>
                             </td>
@@ -115,10 +115,10 @@
 <script>
 
     $(function(){
-        $('.am-btn').on('click', function(){
-            var adminId =  $(this).data('id');
+        $('.am-btn-delete').on('click', function(){
+            var blogId =  $(this).data('id');
             if(confirm('确定是否删除记录，不可恢复!?')){
-                location.href = 'admin/delete_admin?admin_id='+adminId;
+                location.href = 'admin/delete_blog?blog_id='+blogId;
             }
         });
     });

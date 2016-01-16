@@ -3,12 +3,13 @@ $(function(){
 	var $header = $('#header'),
 		$nav = $('#nav'),
 		$navIcon = $('.nav-icon',$header),
-		$navClose = $('.close',$nav);
-		$port = $('#portfolio');
-		$portList = $('.port-list',$port);
-		$myblog = $('#myblog');
-		$myblogList = $('.col',$myblog);
+		$navClose = $('.close',$nav),
+		$port = $('#portfolio'),
+		$portList = $('.port-list',$port),
+		$myblog = $('#myblog'),
 		$toTop = $('#toTop');
+		//$myblogList = $('.col',$myblog),
+
 
 
 		//导航
@@ -59,16 +60,23 @@ $(function(){
 
 
 		//瀑布流
+		// ?? 2016-01-14  12:27 by liuwei
+		////$blogHeadSection = $('.myblog-top',$myblog );
+		//$myblogTop = $('.myblog-top',$myblog );
+		//var iMyblogTop = $myblogTop.offset().top,
+		//	iMyblogHeight = $myblogTop.height();
+
+
 		$blogHeadSection = $('#myblog .myblog-top');
 		var iHeadSectionTop = $blogHeadSection.offset().top,
-				iHeadSectionHeight = $blogHeadSection.height();
+			iHeadSectionHeight = $blogHeadSection.height();
 		var bLoad = true;//判断是否该加载新数据
 		var bLoaded = false;//判断本次请求的数据是不是加载完毕
 		var isEnd = false;//判断是不是加载完数据库中的所有数据
 		var page = 0;//控制分页
 
 		function getMinUl(){
-			$blogList = $('.blog-list');
+			$blogList = $('#myblog .blog-list');
 			var $minUl =  $blogList.eq(0);
 			for(var i=1; i<$blogList.length; i++){
 				if($blogList.eq(i).height() < $minUl.height()){
@@ -92,7 +100,7 @@ $(function(){
 									+ '<a href="welcome/detail?blog_id='+blog.blog_id+'"><img src='+blog.blog_photo+' title="name" /></a>'
 									+ '</div>'
 									+ '<div class="blog-artical-info">'
-									+ '<h3><a href="#">'+blog.blog_title+'</a></h3>'
+									+ '<h3><a href="welcome/detail?blog_id='+blog.blog_id+'">'+blog.blog_title+'</a></h3>'
 									+ '<span>'+blog.admin_name+' | <a href="#">13 comments</a></span>'
 									+ '<p>'+blog.blog_content+'</p>'
 									+ '<a class="more-btn" href="#">See More</a>'

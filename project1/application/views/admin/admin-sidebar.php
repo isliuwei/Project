@@ -16,7 +16,8 @@
             <li><a href="admin/admin_mgr"><span class="am-icon-table"></span> 用户管理</a></li>
             <li><a href="admin/admin_article_mgr"><span class="am-icon-table"></span> 文章管理</a></li>
             <li><a href="admin/admin_comment_mgr"><span class="am-icon-table"></span> 评论管理</a></li>
-            <li><a href="admin-form.html"><span class="am-icon-pencil-square-o"></span> 表单</a></li>
+            <li><a href="admin/admin_message_mgr"><span class="am-icon-table"></span> 留言管理</a></li>
+            <li><a href="admin/admin_add_mgr"><span class="am-icon-pencil-square-o"></span> 新增管理</a></li>
             <li><a href="#"><span class="am-icon-sign-out"></span> 注销</a></li>
         </ul>
 

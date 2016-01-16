@@ -20,19 +20,45 @@ class Admin_model extends CI_Model {
         return $this -> db -> get('t_admin') -> result();
     }
 
-    //增
-    public function save($admin_name, $admin_pwd){
+    //增 新增  ?? 2016-01-13 14:59
+//    public function save_admin($admin_name, $admin_pwd){
+//        $data = array(
+//            'admin_name' => $admin_name,
+//            'admin_pwd' => $admin_pwd
+//        );
+//        $this -> db -> insert('t_admin',$data);
+//    }
 
-    }
-
-    //改
-    public function updata(){
-
-    }
+    //改 ?? 2016-01-13 14:59
+//    public function updata($admin_id){
+//
+//        $data = array(
+//            'admin_name' => $admin_name,
+//            'admin_pwd' => $admin_pwd
+//        );
+//        $this -> db -> where('admin_id',$admin_id);
+//        $this -> db -> updata('t_admin', $data);
+//    }
 
     //删
-    //?? 16-1-12 12:00 by liuwei
+    //!! 16-1-15 11:19 by liuwei
     public function delete($admin_id){
         $this -> db -> delete('t_admin', array('admin_id' => $admin_id));
     }
+
+//    增 新增  ?? 2016-01-16 11:03
+    public function save_admin_by_name_pwd_photo($name, $pwd,$photo){
+        $data = array(
+            'admin_name' => $name,
+            'admin_pwd' => $pwd,
+            'admin_photo' => $photo
+        );
+        $this -> db -> insert('t_admin',$data);
+    }
+
+
+
+
+
+
 }
