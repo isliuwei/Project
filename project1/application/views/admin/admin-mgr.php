@@ -54,6 +54,7 @@
                 <th class="table-check"><input type="checkbox" /></th>
                 <th class="table-id">ID</th>
                 <th class="table-title">用户名</th>
+                <th class="table-title">用户密码</th>
                 <th class="table-type">头像</th>
                 <th class="table-set">操作</th>
               </tr>
@@ -66,11 +67,12 @@
                 <td><input type="checkbox" /></td>
                 <td><?php echo $admin -> admin_id; ?></td>
                 <td><a href="#"><?php echo $admin -> admin_name; ?></a></td>
+                <td><a href="#"><?php echo $admin -> admin_pwd; ?></a></td>
                 <td>photo路径: <?php echo $admin -> admin_photo; ?></td>
                 <td>
                   <div class="am-btn-toolbar">
                     <div class="am-btn-group am-btn-group-xs">
-                      <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
+                      <button data-id="<?php echo $admin -> admin_id; ?>" class="am-btn am-btn-default am-btn-xs am-text-secondary am-btn-updata"><span class="am-icon-pencil-square-o"></span> 编辑</button>
                       <button data-id="<?php echo $admin -> admin_id; ?>" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only am-btn-delete"><span class="am-icon-trash-o"></span> 删除</button>
                     </div>
                   </div>
@@ -109,12 +111,25 @@
 <script>
 
  $(function(){
+
    $('.am-btn-delete').on('click', function(){
      var adminId =  $(this).data('id');
      if(confirm('确定是否删除记录，不可恢复!?')){
        location.href = 'admin/delete_admin?admin_id='+adminId;
      }
    });
+
+   $('.am-btn-updata').on('click', function(){
+     var adminId =  $(this).data('id');
+     if(confirm('确定是否更新记录，不可恢复!?')){
+       location.href = 'admin/get_admin?admin_id='+adminId;
+     }
+   });
+
+
+
+
+
  });
 </script>
 </body>

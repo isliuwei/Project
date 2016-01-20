@@ -40,7 +40,11 @@
                 <div class="am-btn-toolbar">
                     <div class="am-btn-group am-btn-group-xs">
                         <button type="button" class="am-btn am-btn-default"><span class="am-icon-plus"></span> 新增</button>
-                        <button type="button" class="am-btn am-btn-default"><span class="am-icon-trash-o"></span> 删除</button>
+                        <button type="button" id="checkAll" class="am-btn am-btn-default"><span class="am-icon-trash-o"></span> 全选</button>
+                        <button type="button" id="checkRev" class="am-btn am-btn-default"><span class="am-icon-trash-o"></span> 反选</button>
+                        <button type="button" id="checkNo" class="am-btn am-btn-default"><span class="am-icon-trash-o"></span> 取消</button>
+                        <button type="button" id="delChecked" class="am-btn am-btn-default"><span class="am-icon-trash-o"></span> 删除</button>
+
                     </div>
                 </div>
             </div>
@@ -64,7 +68,7 @@
                     foreach($messages as $message){
                         ?>
                         <tr>
-                            <td><input type="checkbox" /></td>
+                            <td><input type="checkbox" class="checkItem" value="<?php echo $message -> message_id; ?>"/></td>
                             <td><?php echo $message -> message_id; ?></td>
                             <td style="width: 150px";><?php echo $message -> username; ?></td>
                             <td> <?php echo $message -> email; ?></td>
@@ -118,6 +122,62 @@
                 location.href = 'admin/delete_message?message_id='+messageId;
             }
         });
+
+//!! 2016-01-20 12:00 by liuwei
+/*****批量删除*****/
+        //选择按钮
+        var $checkAllBtn = $('#checkAll'),
+            $checkNoBtn = $('#checkNo'),
+            $checkRevBtn = $('#checkRev'),
+            $checkItems = $('.checkItem'),
+            $delCheckedBtn = $('#delChecked');
+
+        //全选
+        $checkAllBtn.on('click', function(){
+            $checkItems.prop('checked','checked');
+        });
+
+        //反选
+        $checkRevBtn.on('click', function(){
+            $checkItems.each(function(){
+                this.checked = !this.checked;
+            });
+        });
+
+        //取消全选
+        $checkNoBtn.on('click', function(){
+            $checkItems.prop('checked',false);
+        });
+
+        //删除选中
+
+        $delCheckedBtn.on('click', function(){
+            var $messageIds ='';
+            //$('input:checked').parents('tr').hide();
+            $('input:checked').each(function(index,elem){
+                //console.log(index +','+elem.value);
+                $messageIds = $messageIds + elem.value +',';
+            });
+            $messageIds = $messageIds.substring(0,($messageIds.length)-1);
+            //console.log($messageIds);
+            //@ $messageIds = 1,2,3,4
+
+            //使用ajax异步删除
+            //$.get(url, data, callback, type);
+
+            $.get('admin/remove_checked_messages?Ids='+$messageIds,function(res){
+                if(res == 'success'){
+                    $('input:checked').parents('tr').fadeOut(function(){
+                        $(this).remove();
+                        location.reload();
+                    });
+                }
+            },'text');
+        });
+/*****批量删除*****/
+
+
+
     });
 </script>
 </body>

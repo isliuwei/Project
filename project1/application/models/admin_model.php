@@ -56,7 +56,26 @@ class Admin_model extends CI_Model {
         $this -> db -> insert('t_admin',$data);
     }
 
+//查 !! 2016-01-17 19:57
+    public function get_admin_by_id($admin_id)
+    {
+        $data = array(
+            'admin_id' => $admin_id
+        );
+        $query = $this -> db -> get_where('t_admin',$data);
+        //返回一行查询结果
+        return $query -> row();
+    }
 
+    public function updata_admin($admin_id,$name,$pwd){
+        $data = array(
+            'admin_name' => $name,
+            'admin_pwd' => $pwd
+        );
+
+        $this->db->where('admin_id', $admin_id);
+        $this->db->update('t_admin', $data);
+    }
 
 
 

@@ -19,6 +19,7 @@ class Comment_model extends CI_Model {
         $this -> db -> select("*");
         $this -> db -> from('t_comment comment');
         $this -> db -> order_by('add_time','desc' ); //按照时间降序排列评论信息
+        //$this -> db -> group_by("blog_id");
         return $this -> db -> get() -> result();
     }
 

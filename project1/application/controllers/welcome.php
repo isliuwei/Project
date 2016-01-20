@@ -168,8 +168,14 @@ class Welcome extends CI_Controller {
 		$all = $this -> blog_model -> get_all();
 		$total = count($all);
 		$total_page = ceil($total / 6);
+		/*?? 2016-01-20 13:17 by liuwei*/
+		//$this -> load -> model('comment_model');
+		//$all_comments = $this -> comment_model -> get_all();
+		//$total_comments = count($all_comments);
+		/*??*/
 		$result = $this -> blog_model -> get_by_page($page);
 		$json = array(
+				//'num' => $total_comments,
 				'data' => $result,
 				'isEnd' => $page/6<$total_page?false:true
 		);

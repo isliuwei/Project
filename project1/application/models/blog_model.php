@@ -13,6 +13,7 @@ class Blog_model extends CI_Model {
         $this -> db -> select("*");
         $this -> db -> from('t_blog blog');
         $this -> db -> join('t_admin admin', 'blog.blog_author=admin.admin_id');
+        //$this -> db -> join('t_comment comment', 'blog.blog_id=comment.comment_id');
         return $this -> db -> get() -> result();
     }
 
@@ -42,9 +43,10 @@ class Blog_model extends CI_Model {
     }
 
     //改
-    public function updata(){
-
-    }
+//    public function updata_article(){
+//
+//
+//    }
 
     //删
     public function delete($blog_id){
@@ -53,19 +55,34 @@ class Blog_model extends CI_Model {
     }
 
 //    增 新增  ?? 2016-01-16 11:51
-    public function save_articles($title,$content,$author,$photo){
+    public function save_articles($title,$content,$author,$photo,$type){
         $data = array(
             'blog_title' => $title,
             'blog_content' => $content,
             'blog_author' => $author,
-            'blog_photo' => $photo
-
+            'blog_photo' => $photo,
+            'blog_type' => $type
         );
 
         $this -> db -> insert('t_blog',$data);
 
     }
 
+//    更新  新增  ?? 2016-01-19 15:04
+    public function updata_article($blog_id,$type,$title,$author,$content,$photo){
+
+        $data = array(
+            'blog_type' => $type,
+            'blog_title' => $title,
+            'blog_author' => $author,
+            'blog_content' => $content,
+            'blog_photo' => $photo
+        );
+
+        $this -> db -> where('blog_id', $blog_id);
+        $this -> db -> update('t_blog', $data);
+
+    }
 
 
 

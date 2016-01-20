@@ -30,6 +30,20 @@ class Message_model extends CI_Model {
         $this -> db -> delete('t_message', array('message_id' => $message_id));
     }
 
+    //!! 2016-01-20 12:20 by liuwei
+    /*****批量删除*****/
+    public function delete_by_ids($messageIds){//$messageIds = 1,2,3,4,5
+        //查找多条 where_in 数组
+        //$this -> db -> where_in('message_id',$messageIds);
+        //$this -> db -> delete('t_message');
+        $this -> db -> query('delete from t_message where message_id in('.$messageIds.')');
+        if($this -> db -> affected_rows() > 0){
+            return TRUE;
+        }
+            return FALSE;
+    }
+    /*****批量删除*****/
+
 
 
 }

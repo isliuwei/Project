@@ -95,6 +95,8 @@ $(function(){
 					if(!res.isEnd){
 						for(var i=0; i<res.data.length; i++){
 							var blog = res.data[i];
+							//?? 2016-01-20 13:17 by liuwei
+							//var num = res.num;
 							var html = '<li class="blog-artical">'
 									+ '<div class="blog-artical-pic">'
 									+ '<a href="welcome/detail?blog_id='+blog.blog_id+'"><img src='+blog.blog_photo+' title="name" /></a>'

@@ -50,11 +50,12 @@
             <h3 class="comment-title">所有评论</h3>
 
             <?php
+                $count=1;
                  foreach ($comments as $comment){
             ?>
                  <div class="comment-wrap">
                      <div class="comment-info">
-                         <span class="comment-floor">1楼 | </span>
+                         <span class="comment-floor"><?php echo $count++; ?>楼 | </span>
                          <span class="comment-username">评论用户:<?php echo $comment -> username; ?> | </span>
                          <span class="comment_time">评论时间:<?php echo $comment -> add_time; ?></span>
                      </div>

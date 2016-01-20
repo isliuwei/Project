@@ -83,12 +83,12 @@
           <div class="am-g am-margin-top">
             <div class="am-u-sm-4 am-u-md-2 am-text-right">文章类型</div>
             <div class="am-u-sm-8 am-u-md-10" style="margin-bottom: 20px;">
-              <select data-am-selected="{btnSize: 'sm'}">
-                <option value="option1">原创</option>
-                <option value="option2">转载</option>
-                <option value="option3">小说</option>
-                <option value="option4">散文</option>
-                <option value="option5">随笔</option>
+              <select name="type" data-am-selected="{btnSize: 'sm'}">
+                <option value="原创">原创</option>
+                <option value="转载">转载</option>
+                <option value="小说">小说</option>
+                <option value="散文">散文</option>
+                <option value="随笔">随笔</option>
               </select>
             </div>
 
@@ -116,7 +116,8 @@
               文章插图
             </div>
             <div class="am-u-sm-8 am-u-md-4">
-              <input type="text" name="photo" class="am-input-sm" value="default">
+              <input type="text" name="photo" class="am-input-sm" value="img/default.gif">
+              <input type="file">
             </div>
             <div class="am-hide-sm-only am-u-md-6">选填</div>
           </div>
@@ -136,7 +137,9 @@
              文章内容
             </div>
             <div class="am-u-sm-12 am-u-md-10">
-              <textarea rows="10" name="content"></textarea>
+<!--              使用百度富文本编辑器UEditor-->
+<!--              textarea的id值传给var ue = UE.getEditor('editor');-->
+              <textarea rows="10" name="content" id="editor">这里写你的文章内容</textarea>
             </div>
           </div>
 
@@ -206,6 +209,8 @@
   <p class="am-padding-left">© 2014 AllMobilize, Inc. Licensed under MIT license.</p>
 </footer>
 
+<script id="editor" type="text/plain" style="width:1024px;height:500px;"></script>
+
 <!--[if lt IE 9]>
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
@@ -217,5 +222,26 @@
 <!--<![endif]-->
 <script src="assets/js/amazeui.min.js"></script>
 <script src="assets/js/app.js"></script>
+
+<!--百度富文本编辑器 UEditor-->
+<script type="text/javascript" charset="utf-8" src="assets/UEditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="assets/UEditor/ueditor.all.min.js"> </script>
+<!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+<!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+<script type="text/javascript" charset="utf-8" src="assets/UEditor/lang/zh-cn/zh-cn.js"></script>
+
+<script type="text/javascript">
+
+  //实例化编辑器
+  var ue = UE.getEditor('editor');
+
+</script>
+
+<!--百度富文本编辑器 UEditor-->
+
+
+
+
+
 </body>
 </html>

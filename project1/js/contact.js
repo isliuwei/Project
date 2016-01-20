@@ -60,6 +60,7 @@ $(function(){
                $content.css('border','1px solid red');
            }else if(res == 'success' ){
                alert('感谢您的留言!');
+               location.reload();
            }
         });
     });
